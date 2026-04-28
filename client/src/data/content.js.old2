@@ -1,0 +1,78 @@
+export const buildings = [
+  {
+    id: 1,
+    name: 'Gedung 1 (3 Lantai)',
+    location: 'Dekat Kampus ITS Surabaya',
+    address: 'Jl. Teknik Kimia No.10, Sukolilo',
+    description: 'Ideal untuk yang Simpel & Efisien',
+    mapLink: 'https://goo.gl/maps/ITSexample',
+    rooms: ['Ruang tamu: 1 unit', 'Dapur kering: 2 unit', 'CCTV: 16 kamera', 'WiFi: Up to 100 Mbps/lantai'],
+    roomTypes: [
+      {
+        type: 'Basic',
+        price: 'Rp1.800.000/bln',
+        bed: 'Springbed 120x200',
+        facilities: 'Lemari, meja kerja, AC, 3 stopkontak, KM dalam (water heater & hanger)',
+        images: ['/room-basic1.jpg', '/room-basic2.jpg']
+      },
+      {
+        type: 'Superior',
+        price: 'Rp2.400.000/bln',
+        bed: 'Springbed 160x200',
+        facilities: 'Lemari, meja kerja, AC, 4 stopkontak, KM dalam (water heater & hanger)',
+        images: ['/room-superior1.jpg', '/room-superior2.jpg']
+      }
+    ]
+  },
+  {
+    id: 2,
+    name: 'Gedung 2 (5 Lantai)',
+    location: 'Dekat Kampus UBAYA Surabaya',
+    address: 'Jl. Raya Ngagel No.25, Wonokromo',
+    description: 'Premium untuk Kenyamanan Maksimal',
+    mapLink: 'https://goo.gl/maps/UBAYAexample',
+    rooms: ['Ruang tamu: 2 unit', 'Dapur kering: 3 unit', 'CCTV: 32 kamera', 'WiFi: Up to 125 Mbps/lantai'],
+    roomTypes: [
+      {
+        type: 'Basic',
+        price: 'Rp1.900.000/bln',
+        bed: 'Springbed 120x200',
+        facilities: 'Lemari, meja kerja, AC, 3 stopkontak, KM dalam',
+        images: ['/room-basic1.jpg', '/room-basic2.jpg']
+      },
+      {
+        type: 'Superior',
+        price: 'Rp2.600.000/bln',
+        bed: 'Springbed 160x200',
+        facilities: 'Lemari, meja kerja, AC, 4 stopkontak, KM dalam',
+        images: ['/room-superior1.jpg', '/room-superior2.jpg']
+      },
+      {
+        type: 'Deluxe',
+        price: 'Rp3.000.000/bln',
+        bed: 'Springbed 200x200',
+        facilities: '2 lemari, meja kerja, AC, 6 stopkontak, KM dalam',
+        images: ['/room-deluxe1.jpg', '/room-deluxe2.jpg']
+      }
+    ]
+  }
+];
+
+export const facilitiesList = [
+  { icon: '🅿️', title: 'Parkir Gratis', desc: 'Motor & mobil, area luas.' },
+  { icon: '🔌', title: 'Listrik Token', desc: 'Per kamar, lebih hemat dan fleksibel.' },
+  { icon: '🛋️', title: 'Ruang Tamu Cozy', desc: 'Tempat bersantai dan menerima tamu.' },
+  { icon: '🍽️', title: 'Dapur Kering', desc: 'Lengkap: kulkas + dispenser.' },
+  { icon: '📹', title: 'CCTV 24/7', desc: '16-32 kamera super aman.' },
+  { icon: '📶', title: 'WiFi Unlimited', desc: 'Up to 125 Mbps per lantai.' },
+  { icon: '🛡️', title: 'RFID Card', desc: 'Keamanan tinggi, denda jika hilang.' },
+  { icon: '🧺', title: 'Laundry Gratis', desc: 'Cuci + setrika 10 potong/2 hari.' },
+  { icon: '👮', title: 'Penjaga 24 Jam', desc: 'Petugas ramah siap membantu.' },
+];
+
+export const testimonials = [
+  { name: 'Rina', role: 'Mahasiswi ITS', text: 'Kostnya nyaman banget, dekat kampus dan fasilitas laundry sangat membantu. AC dingin, WiFi kencang!' },
+  { name: 'Andi', role: 'Karyawan Swasta', text: 'Lokasi strategis ke kantor, parkir mobil luas. Sistem token listrik lebih hemat.' },
+  { name: 'Sinta', role: 'Mahasiswi UBAYA', text: 'Keamanan super ketat dengan kartu RFID, jadi tenang ninggalin barang. Kamar mandi water heater mantap.' },
+  { name: 'Budi', role: 'Freelancer', text: 'Dapurnya bersih lengkap, enak untuk masak ringan. Ruang tamunya cozy banget buat nongkrong.' },
+];

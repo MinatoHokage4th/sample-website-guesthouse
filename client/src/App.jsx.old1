@@ -1,0 +1,56 @@
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import Rooms from './pages/Rooms';
+import Facilities from './pages/Facilities';
+import Contact from './pages/Contact';
+import Testimonials from './pages/Testimonials';
+import ScrollToTop from './components/ScrollToTop';
+import WhatsAppButton from './components/WhatsAppButton';
+import './styles/transitions.css';
+
+export default function App() {
+  const location = useLocation();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setIsScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
+    console.log(`Navigasi ke: ${location.pathname}`);
+  }, [location.pathname]);
+
+  return (
+    <div className={`app-container ${isScrolled ? 'scrolled' : ''}`}>
+      <ScrollToTop />
+      <Navbar />
+      <main className="main-content">
+        <TransitionGroup>
+          <CSSTransition key={location.key} classNames="page" timeout={300}>
+            <Routes location={location}>
+              <Route path="/" element={<Home />} />
+              <Route path="/rooms" element={<Rooms />} />
+              <Route path="/fasilitas" element={<Facilities />} />
+              <Route path="/kontak" element={<Contact />} />
+              <Route path="/testimoni" element={<Testimonials />} />
+              <Route path="*" element={
+                <div className="not-found" data-aos="fade-up">
+                  <h2>404 - Halaman Tidak Ditemukan</h2>
+                  <p>Maaf, halaman yang Anda cari tidak ada.</p>
+                </div>
+              } />
+            </Routes>
+          </CSSTransition>
+        </TransitionGroup>
+      </main>
+      <WhatsAppButton />
+      <Footer />
+    </div>
+  );
+}
