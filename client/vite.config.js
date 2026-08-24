@@ -1,9 +1,10 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: '/sample-website-guesthouse/'
+  base: "/",
+  //base: '/sample-website-guesthouse/'
   //server: {
   //  port: 3000,
   // proxy: {

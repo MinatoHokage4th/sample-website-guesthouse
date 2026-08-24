@@ -1,31 +1,31 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const sections = [
-  { id: 'section-foto', label: 'Foto' },
-  { id: 'section-fasilitas', label: 'Fasilitas' },
-  { id: 'section-deskripsi', label: 'Deskripsi' },
-  { id: 'section-spesifikasi', label: 'Spesifikasi' },
-  { id: 'section-lokasi', label: 'Lokasi' },
+  { id: "section-foto", label: "Foto" },
+  { id: "section-fasilitas", label: "Fasilitas" },
+  { id: "section-deskripsi", label: "Deskripsi" },
+  { id: "section-spesifikasi", label: "Spesifikasi" },
+  { id: "section-lokasi", label: "Lokasi" },
 ];
 
 export default function SubNavbar() {
-  const [activeSection, setActiveSection] = useState('section-foto');
+  const [activeSection, setActiveSection] = useState("section-foto");
 
   useEffect(() => {
-    console.log('SubNavbar mounted, starting IntersectionObserver');
+    //console.log("SubNavbar mounted, starting IntersectionObserver");
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log(`Section visible: ${entry.target.id}`);
+            //console.log(`Section visible: ${entry.target.id}`);
             setActiveSection(entry.target.id);
           }
         });
       },
       {
-        rootMargin: '-80px 0px -60% 0px', // offset untuk sticky header
+        rootMargin: "-80px 0px -60% 0px", // offset untuk sticky header
         threshold: 0.1,
-      }
+      },
     );
 
     sections.forEach((section) => {
@@ -39,8 +39,8 @@ export default function SubNavbar() {
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
     if (el) {
-      console.log(`Scrolling to section: ${id}`);
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      //console.log(`Scrolling to section: ${id}`);
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
@@ -50,7 +50,7 @@ export default function SubNavbar() {
         {sections.map((section) => (
           <button
             key={section.id}
-            className={`sub-nav-item ${activeSection === section.id ? 'active' : ''}`}
+            className={`sub-nav-item ${activeSection === section.id ? "active" : ""}`}
             onClick={() => scrollToSection(section.id)}
           >
             {section.label}
