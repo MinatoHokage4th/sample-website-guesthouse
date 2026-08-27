@@ -3,8 +3,11 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/",
-  //base: '/sample-website-guesthouse/'
+  base: "/sample-website-guesthouse",
+  build: {
+    outDir: "dist",
+    //assetsDir: "src/assets",
+  },
   //server: {
   //  port: 3000,
   // proxy: {

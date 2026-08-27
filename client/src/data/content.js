@@ -33,11 +33,20 @@ export const buildings = [
         description:
           "Kamar Basic kami dirancang untuk penghuni yang menginginkan kenyamanan esensial dengan harga terjangkau. Dilengkapi dengan springbed ukuran 120x200cm yang nyaman, meja kerja luas, dan AC memberikan suasana istirahat sejuk.",
         images: {
-          room: ["../image/kamar-1.jpg", "../image/kamar-2.jpg"],
-          layout: ["../image/layout-1.jpg"],
-          bed: ["../image/bed-1.jpg", "../image/bed-2.jpg"],
-          furniture: ["../image/furniture-1.jpg", "../image/furniture-2.jpg"],
-          toilet: ["../image/toilet-1.jpg", "../image/toilet-2.jpg"],
+          room: [
+            "/src/assets/image/kamar-1.jpg",
+            "/src/assets/image/kamar-2.jpg",
+          ],
+          layout: ["/src/assets/image/layout-1.jpg"],
+          bed: ["/src/assets/image/bed-1.jpg", "/src/assets/image/bed-2.jpg"],
+          furniture: [
+            "/src/assets/image/furniture-1.jpg",
+            "/src/assets/image/furniture-2.jpg",
+          ],
+          toilet: [
+            "/src/assets/image/toilet-1.jpg",
+            "/src/assets/image/toilet-2.jpg",
+          ],
         },
         specs: {
           listrik: "1300 VA (Token)",

@@ -41,15 +41,7 @@ function AnimatedRoutes() {
         <Route path="/fasilitas" element={<Facilities />} />
         <Route path="/kontak" element={<Contact />} />
         <Route path="/testimoni" element={<Testimonials />} />
-        <Route
-          path="*"
-          element={
-            <div className="not-found" data-aos="fade-up">
-              <h2>404 - Halaman Tidak Ditemukan</h2>
-              <p>Maaf, halaman yang Anda cari tidak ada.</p>
-            </div>
-          }
-        />
+        <Route path="*" element={<Home />} />
       </Routes>
     </div>
   );
