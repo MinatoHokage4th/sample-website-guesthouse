@@ -5,7 +5,7 @@ import path from "path";
 export default defineConfig(({ command, mode }) => {
   const config = {
     plugins: [react()],
-    //base: "/your-repository-name/", // Must match your repo name exactly
+    base: "/",
     build: {
       outDir: "dist",
       assetsDir: "assets",
@@ -59,18 +59,15 @@ export default defineConfig(({ command, mode }) => {
 
   if (command === "serve") {
     // Development-specific config
-    config.server = {
-      base: "/",
-    };
+    config.base = "/";
   } else {
     // Production build config
-    config.server = {
-      base: "/sample-website-guesthouse/",
-    };
+    config.base = "/sample-website-guesthouse/";
   }
 
   console.log("mode : " + mode);
   console.log("command : " + command);
+  console.log("\n\n base config : \n" + config.base);
 
   return config;
 });
