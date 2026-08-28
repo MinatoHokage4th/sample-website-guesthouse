@@ -1,15 +1,17 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Home from "./pages/Home";
-import Rooms from "./pages/Rooms";
-import Facilities from "./pages/Facilities";
-import Contact from "./pages/Contact";
-import Testimonials from "./pages/Testimonials";
-import RoomDetail from "./pages/RoomDetail";
-import ScrollToTop from "./components/ScrollToTop";
-import WhatsAppButton from "./components/WhatsAppButton";
+
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
+import WhatsAppButton from "@/components/WhatsAppButton";
+
+import Home from "@/pages/Home";
+import Rooms from "@/pages/Rooms";
+import RoomDetail from "@/pages/RoomDetail";
+import Facilities from "@/pages/Facilities";
+import Testimonials from "@/pages/Testimonials";
+import Contact from "@/pages/Contact";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -48,6 +50,11 @@ function AnimatedRoutes() {
 }
 
 export default function App() {
+  const b = import.meta.env.BASE_URL;
+  const m = import.meta.env.MODE;
+  const d = import.meta.env.DEV === true ? "dev" : "not dev";
+  const p = import.meta.env.PROD === true ? "prod" : "not prod";
+
   return (
     <div className="app-container">
       <ScrollToTop />

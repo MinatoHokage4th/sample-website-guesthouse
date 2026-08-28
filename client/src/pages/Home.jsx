@@ -1,19 +1,18 @@
 import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
-import { buildings } from "../data/content";
 
 // Data untuk carousel hero
 const heroSlides = [
   {
-    image: "/src/assets/image/gedung-1.jpg",
+    image: "./image/gedung-1.jpg",
     title:
-      "Hunian 5 menit menuju salah satu Universitas ter Institut Teknologi Sepuluh November (ITS) Surabaya",
+      "Hunian 5 menit menuju Institut Teknologi Sepuluh November (ITS) Surabaya",
     subtitle: "Hunian nyaman dan lengkap, khusus untuk mahasiswa pria",
     link: "/fasilitas",
     cta: "Lihat Fasilitas Gedung",
   },
   {
-    image: "/src/assets/image/gedung-2.jpg",
+    image: "./image/gedung-2.jpg",
     title:
       "Kamar nyaman dengan fasilitas lengkap mendukung produktivitas mahasiswa",
     subtitle:
@@ -26,19 +25,19 @@ const heroSlides = [
 // Data untuk carousel kamar (thumbnail)
 const roomSlides = [
   {
-    image: "/src/assets/image/kamar-1.jpg",
+    image: "./image/kamar-1.jpg",
     title: "Kamar",
     price: "Mulai Rp2.000.000/bln *)",
     slug: "gedung-1-basic",
   },
   {
-    image: "/src/assets/image/dapur-1.jpg",
+    image: "./image/dapur-1.jpg",
     title: "Dapur Kering",
     price: "Kulkas + Water Dispenser",
     slug: "/fasilitas",
   },
   {
-    image: "/src/assets/image/ruang-tamu.jpg",
+    image: "./image/ruang-tamu.jpg",
     title: "Ruang Tamu",
     price: "Tempat bersantai & menerima tamu",
     slug: "/fasilitas",

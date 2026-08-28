@@ -1,4 +1,14 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
+  const navLinks = [
+    { path: "/", label: "Beranda" },
+    { path: "/rooms", label: "Kamar" },
+    { path: "/fasilitas", label: "Fasilitas" },
+    { path: "/testimoni", label: "Testimoni" },
+    // { path: "/kontak", label: "Kontak" },
+  ];
+
   //console.log("Footer rendered");
   return (
     <footer className="footer">
@@ -12,7 +22,7 @@ export default function Footer() {
               <tr>
                 <td>
                   <img
-                    src="../image/icon/whatsapp-svgrepo-com.svg"
+                    src="./icon/whatsapp.svg"
                     alt="WhatsApp"
                     width="25"
                     height="25"
@@ -33,7 +43,7 @@ export default function Footer() {
               <tr>
                 <td>
                   <img
-                    src="../image/icon/instagram-2-1-logo-svgrepo-com.svg"
+                    src="./icon/instagram.svg"
                     alt="Instagram"
                     width="25"
                     height="25"
@@ -76,21 +86,11 @@ export default function Footer() {
         <div className="footer-links">
           <h4>Menu</h4>
           <ul>
-            <li>
-              <a href="/">Beranda</a>
-            </li>
-            <li>
-              <a href="/rooms">Kamar</a>
-            </li>
-            <li>
-              <a href="/fasilitas">Fasilitas</a>
-            </li>
-            <li>
-              <a href="/testimoni">Testimoni</a>
-            </li>
-            {/* <li>
-              <a href="/kontak">Kontak</a>
-            </li> */}
+            {navLinks.map((link) => (
+              <li key={link.path}>
+                <Link to={link.path}>{link.label}</Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

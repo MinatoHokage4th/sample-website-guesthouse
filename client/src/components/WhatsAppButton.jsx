@@ -8,12 +8,7 @@ export default function WhatsAppButton() {
       rel="noopener noreferrer"
       aria-label="Chat via WhatsApp"
     >
-      <img
-        src="../image/icon/whatsapp-svgrepo-com.svg"
-        alt="WhatsApp"
-        width="40"
-        height="40"
-      />
+      <img src="./icon/whatsapp.svg" alt="WhatsApp" width="40" height="40" />
     </a>
   );
 }

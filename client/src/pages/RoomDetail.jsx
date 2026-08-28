@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { getRoomBySlug } from "../data/content";
+import { getRoomBySlug } from "/src/data/content";
 import SubNavbar from "../components/SubNavbar";
 
 const photoCategories = [

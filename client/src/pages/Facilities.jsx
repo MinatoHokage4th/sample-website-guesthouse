@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { facilitiesList } from "../data/content";
+import { facilitiesList } from "/src/data/content";
 
 export default function Facilities() {
   useEffect(() => {
