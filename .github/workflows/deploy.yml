@@ -22,7 +22,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
+  build:
     # Hanya jalankan jika PR di-merge (bukan sekadar ditutup)
     if: github.event_name != 'pull_request' || github.event.pull_request.merged == true
     environment:
@@ -49,10 +49,20 @@ jobs:
         run: npm run build
         working-directory: .
 
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload artifact for GitHub Pages
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: gh-pages
-          force_orphan: true # bersihkan riwayat branch gh-pages
+          path: ./dist
+
+  deploy:
+    # Job deploy resmi menggunakan Environment github-pages
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
