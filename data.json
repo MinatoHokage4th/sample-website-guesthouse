@@ -1,0 +1,16 @@
+{
+  "message": "Hello from Node.js!",
+  "timestamp": "2026-08-28T17:11:59.454Z",
+  "articles": [
+    {
+      "id": 1,
+      "title": "Static Generation",
+      "body": "This data was compiled by Node.js."
+    },
+    {
+      "id": 2,
+      "title": "Manual Generation",
+      "body": "This data was compiled by Developer."
+    }
+  ]
+}
